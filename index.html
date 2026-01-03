@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-5 Dynamic Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h2>Task-5 Dynamic Web Application</h2>
+
+  <nav>
+    <button class="nav-btn active" onclick="scrollToSection('home')">Home</button>
+    <button class="nav-btn" onclick="scrollToSection('tasks')">Tasks</button>
+    <button class="nav-btn" onclick="scrollToSection('projects')">Projects</button>
+    <button class="nav-btn" onclick="scrollToSection('contact')">Contact</button>
+  </nav>
+
+  <button id="darkToggle">🌙 Dark Mode</button>
+</header>
+
+<main>
+
+  <section id="home" class="section reveal">
+    <div class="card">
+      <h3>Home</h3>
+      <p>
+        Advanced one-page dynamic web app with scroll reveal animations,
+        task filtering, dark mode, and smooth navigation.
+      </p>
+    </div>
+  </section>
+
+  <section id="tasks" class="section reveal">
+    <div class="card">
+      <h3>Task Manager</h3>
+
+      <input id="taskInput" placeholder="Enter task">
+      <button onclick="addTask()">Add</button>
+
+      <div class="filters">
+        <button onclick="setFilter('all')">All</button>
+        <button onclick="setFilter('pending')">Pending</button>
+        <button onclick="setFilter('completed')">Completed</button>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+  </section>
+
+  <section id="projects" class="section reveal">
+    <div class="card">
+      <h3>Projects</h3>
+      <ul>
+        <li>Portfolio Website</li>
+        <li>Task Manager Application</li>
+        <li>Product Listing Page</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section reveal">
+    <div class="card">
+      <h3>Contact</h3>
+      <button onclick="alert('Message sent successfully!')">
+        Send Message
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

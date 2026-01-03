@@ -1,0 +1,130 @@
+{
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2f3, #d9e4f5);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* HEADER */
+header {
+  background: #0a6cf1;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-btn {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  background: white;
+  color: #0a6cf1;
+}
+
+.nav-btn.active {
+  background: #ffdd57;
+  color: black;
+}
+
+/* DARK MODE BUTTON */
+#darkToggle {
+  margin-top: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 25px;
+  max-width: 450px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* TASK FILTERS */
+.filters {
+  margin: 10px 0;
+}
+
+.filters button {
+  margin-right: 5px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* TASK LIST */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f1f1f1;
+  margin: 6px 0;
+  padding: 8px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* 🌙 DARK MODE */
+body.dark {
+  background: #121212;
+  color: #eaeaea;
+}
+
+body.dark header {
+  background: #1e1e1e;
+}
+
+body.dark .card {
+  background: #1f1f1f;
+}
+
+body.dark li {
+  background: #333;
+}
+
+/* SCROLL REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
